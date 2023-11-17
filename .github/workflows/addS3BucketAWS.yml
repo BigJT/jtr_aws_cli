@@ -5,7 +5,7 @@ name: addS3BucketAWS
 # not working. says there is an error on line 1
 on:
   workflow_dispatch:
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,8 +14,7 @@ jobs:
         uses: actions/checkout@master
     
       - name: Upload to S3
-        run: |
-           aws s3 mb s3://retail-db-bkt-jtr
+        run: aws s3 mb s3://retail-db-bkt-jtr
 env:
     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
