@@ -1,5 +1,5 @@
 name: Upload to S3
-  
+on: push  
 run: |
   aws s3 ls
 env:
